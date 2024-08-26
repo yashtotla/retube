@@ -2,6 +2,7 @@ import { useExtension } from "contexts/extension-context";
 import { Collapsible } from "./ui/collapsible";
 import { useEffect } from "react";
 import { getVideoData } from "utils/functions";
+import Actions from "./actions";
 
 export default function Extension() {
   const {
@@ -44,7 +45,7 @@ export default function Extension() {
     <main ref={setContainer} className={`antialiased w-full mb-3 z-10 ${theme}`}>
       <div className="w-full">
         <Collapsible open={isOpen} onOpenChange={setIsOpen} className="space-y-3">
-          <h1>ReTube</h1>
+          <Actions />
         </Collapsible>
       </div>
     </main>
